@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tiempos;
+    src: url(test-tiempos-text-medium-italic.woff2);
+}
+
+:root {
+    --darker: rgb(3, 12, 26);
+    --dark: #121926;
+    --light: #192133;
+    --lighter: #334366;
+    --TEXT_COLOR_L0: #fff;
+    --TEXT_COLOR_L1: rgba(255, 255, 255, 0.8);
+    --TEXT_COLOR_L2: rgba(255, 255, 255, 0.6);
+}
+
+header {
+    background: var(--darker);
+    color: white;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    flex-direction: row;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--light);
+    border-radius: 50px;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    background-color: var(--dark);
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    color:white;
+    background-color: var(--light);
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    width: calc(100% / 3); /* Display 6 posters in a row */
+    cursor: pointer; /* Add cursor pointer for click interaction */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+}
+
+.details {
+    display: none; /* Initially hide movie details */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.card:hover .details {
+    display: block; /* Show details on card hover */
+}
+
+/* Add styling for movie details (modify as needed) */
+.details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Add more styling for other movie details (e.g., release year, genres, etc.) */
+
+/* Add any other custom styling you need */
